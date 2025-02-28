@@ -7,13 +7,7 @@ class Solution {
             int m = str2.length();
             dp.resize(n + 1, vector<int>(m + 1, 0));
     
-            // Correctly initialize the base cases of the DP table
-            for (int i = 0; i <= n; i++) {
-                dp[i][0] = i;  // First column (str1) with the length of the prefix of str1
-            }
-            for (int j = 0; j <= m; j++) {
-                dp[0][j] = j;  // First row (str2) with the length of the prefix of str2
-            }
+            
     
             // Fill the DP table
             for (int i = 1; i <= n; i++) {
